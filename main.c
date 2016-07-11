@@ -16,32 +16,32 @@ int main(void)
   bs = ptr + MAX-1;
   do {
     printf(": ");
-    fgets(str,sizeof(str), stdin);;
+    fgets(str,sizeof(str), stdin);
     switch(*str) {
       case '+':
-      x = pop();
-      y = pop();
-      printf("%d\n", x+y);
-      push(x+y);
-      break;
+        x = pop();
+        y = pop();
+        printf("%d\n", x+y);
+        push(x+y);
+        break;
       case '-':
-      x = pop();
-      y = pop();
-      printf("%d\n", y-x);
-      push(y-x);
-      break;
+        x = pop();
+        y = pop();
+        printf("%d\n", y-x);
+        push(y-x);
+        break;
       case '*':
-      x = pop();
-      y = pop();
-      printf("%d\n", y*x);
-      push(y*x);
-      break;
+        x = pop();
+        y = pop();
+        printf("%d\n", y*x);
+        push(y*x);
+        break;
       case '/':
-      x = pop();
-      y = pop();
-      if(x==0) {
-      printf("Деление на 0.\n");
-      break;
+        x = pop();
+        y = pop();
+        if(x==0) {
+        printf("Деление на 0.\n");
+        break;
     }
       printf("%d\n", y/x);
       push(y/x);
